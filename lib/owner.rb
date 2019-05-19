@@ -72,17 +72,6 @@ class Owner
 #binding.pry
 
   def list_pets
-    pet_list = []
-    pets.each do |pet, species|
-      if species == pets[:fishes]
-        pet_list << "#{pets[:fishes].count} fish"
-      elsif species == pets[:dogs]
-        pet_list << "#{pets[:dogs].count} dog(s)"
-      elsif species == pets[:cats]
-        pet_list << "#{pets[:cats].count} cat(s)"
-      end
-    end
-    "I have #{pet_list.join(", ").insert(-10, " and")}."
+    "I have #{pets[:fishes].count} fish, #{pets[:dogs].count} dog(s), and #{pets[:cats].count} cat(s)."
   end
-
 end
